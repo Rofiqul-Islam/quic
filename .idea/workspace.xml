@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b37a1f0-a71a-463f-bc99-20f975c3292e" name="Default Changelist" comment="Changed QuicShortHeaderPacket">
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicAckFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicAckFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicAckRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicAckRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicConnectionCloseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicConnectionCloseFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicCryptoFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicCryptoFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/frame/QuicStreamFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/frame/QuicStreamFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicHandshakePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicHandshakePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicInitialPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicInitialPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicLongHeaderPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicLongHeaderPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicShortHeaderPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicShortHeaderPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quic/packet/QuicZeroRTTPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quic/packet/QuicZeroRTTPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/frame/QuicAckFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/frame/QuicAckFrameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/frame/QuicCryptoFrameEncodeEmptyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/frame/QuicCryptoFrameEncodeEmptyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/frame/QuicCryptoFrameEncodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/frame/QuicCryptoFrameEncodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/packet/QuicHandshakePacketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/packet/QuicHandshakePacketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/packet/QuicInitialPacketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/packet/QuicInitialPacketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quic/packet/QuicZeroRTTPacketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/quic/packet/QuicZeroRTTPacketTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YXr5Vc8UmbdPuGVSREkcpNeVe1" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.6.0/junit-jupiter-5.6.0.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="quic.packet" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UtilTest.hexToByteTest">
+    <configuration name="QuicInitialPacketTest.testEncodePacket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bu-quic-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quic.packet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quic.packet" />
+      <option name="MAIN_CLASS_NAME" value="quic.packet.QuicInitialPacketTest" />
+      <option name="METHOD_NAME" value="testEncodePacket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilTest.byteToHexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bu-quic-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quic.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quic.util" />
+      <option name="MAIN_CLASS_NAME" value="quic.util.UtilTest" />
+      <option name="METHOD_NAME" value="byteToHexTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilTest.generatingVariableLengthIntegerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bu-quic-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quic.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quic.util" />
+      <option name="MAIN_CLASS_NAME" value="quic.util.UtilTest" />
+      <option name="METHOD_NAME" value="generatingVariableLengthIntegerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilTest.hexToByteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bu-quic-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quic.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quic.util" />
+      <option name="MAIN_CLASS_NAME" value="quic.util.UtilTest" />
+      <option name="METHOD_NAME" value="hexToByteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilTest.variableLengthIntegerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bu-quic-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quic.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="quic.util" />
+      <option name="MAIN_CLASS_NAME" value="quic.util.UtilTest" />
+      <option name="METHOD_NAME" value="variableLengthIntegerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UtilTest.hexToByteTest" />
+        <item itemvalue="JUnit.QuicInitialPacketTest.testEncodePacket" />
+        <item itemvalue="JUnit.UtilTest.generatingVariableLengthIntegerTest" />
+        <item itemvalue="JUnit.UtilTest.byteToHexTest" />
+        <item itemvalue="JUnit.UtilTest.variableLengthIntegerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b37a1f0-a71a-463f-bc99-20f975c3292e" name="Default Changelist" comment="" />
+      <created>1583099597117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583099597117</updated>
+      <workItem from="1583099599878" duration="2705000" />
+      <workItem from="1583103559527" duration="2604000" />
+      <workItem from="1583106488980" duration="57795000" />
+      <workItem from="1583286418331" duration="937000" />
+      <workItem from="1583684855386" duration="12968000" />
+      <workItem from="1583746242011" duration="1262000" />
+      <workItem from="1583769861799" duration="12939000" />
+      <workItem from="1583789281197" duration="12657000" />
+      <workItem from="1583852917926" duration="15720000" />
+    </task>
+    <task id="LOCAL-00001" summary="Changed QuicShortHeaderPacket">
+      <created>1583206597531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583206597531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed QuicShortHeaderPacketTest">
+      <created>1583206828246</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583206828246</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed QuicShortHeaderPacket" />
+    <MESSAGE value="Changed QuicShortHeaderPacketTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed QuicShortHeaderPacketTest" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="2" key="#Project_Structure" timestamp="1583103718384">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="2" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1583103718384" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583099818189">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1583099818189" />
+    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583172225046">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1583172225046" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1583856311280">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1583856311280" />
+    <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583109603966">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="443" y="210" width="394" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1583109603966" />
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1583206827195">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1583206827195" />
+    <state x="348" y="85" key="FileChooserDialogImpl" timestamp="1583114709460">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="348" y="85" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1583114709460" />
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom" timestamp="1583869062391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="164" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583869062391" />
+    <state width="1237" height="164" key="GridCell.Tab.0.center" timestamp="1583869062391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="164" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583869062391" />
+    <state width="1237" height="164" key="GridCell.Tab.0.left" timestamp="1583869062391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="164" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583869062391" />
+    <state width="1237" height="164" key="GridCell.Tab.0.right" timestamp="1583869062391">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="164" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583869062391" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1583223038666">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583223038666" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1583223038665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1583223038665" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1583223038665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1583223038665" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1583223038666">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1583223038666" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1583116272595">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1583116272595" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1583206831586">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1583206831586" />
+    <state x="341" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1583107154997">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="341" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583107154997" />
+    <state x="375" y="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583114754492">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="375" y="242" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1583114754492" />
+    <state x="412" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583106165740">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1583106165740" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583205124101">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583205124101" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bu_quic_api$QuicShortHeaderServiceTest_testGetDcId.ic" NAME="QuicShortHeaderServiceTest.testGetDcId Coverage Results" MODIFIED="1583104005718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>quic.packet.*</FILTER>
+    </SUITE>
+  </component>
+</project>
