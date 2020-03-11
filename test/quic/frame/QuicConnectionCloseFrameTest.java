@@ -51,8 +51,8 @@ public class QuicConnectionCloseFrameTest {
                                     frameType + ", phrase = " + phrase, () -> {
                                 QuicConnectionCloseFrame frame =
                                         new QuicConnectionCloseFrame(errorCode, frameType, phrase);
-                                assertEquals(errorCode, frame.getErrorCode());
-                                assertEquals(frameType, frame.getFrameType());
+                                assertEquals((long)errorCode, frame.getErrorCode());
+                                assertEquals((long)frameType, frame.getFrameType());
                                 assertEquals(phrase, frame.getReasonPhrase());
                             }))));
         }
@@ -92,7 +92,7 @@ public class QuicConnectionCloseFrameTest {
             return getValidErrorCodes().map(errorCode -> dynamicTest("error code: " + errorCode,
                     () -> {
                 this.frame.setErrorCode(errorCode);
-                assertEquals(errorCode, this.frame.getErrorCode());
+                assertEquals((long)errorCode, this.frame.getErrorCode());
             }));
         }
 
@@ -101,7 +101,7 @@ public class QuicConnectionCloseFrameTest {
             return getInvalidQuicErrorCodes().map(errorCode -> dynamicTest("error code: " + errorCode,
                     () -> {
                 this.frame.setErrorCode(errorCode);
-                assertEquals(errorCode, this.frame.getErrorCode());
+                assertEquals((long)errorCode, this.frame.getErrorCode());
             }));
         }
 
@@ -110,7 +110,7 @@ public class QuicConnectionCloseFrameTest {
             return getValidFrameTypes().map(frameType -> dynamicTest("frame type: " + frameType,
                     () -> {
                 this.frame.setFrameType(frameType);
-                assertEquals(frameType, this.frame.getFrameType());
+                assertEquals((long)frameType, this.frame.getFrameType());
             }));
         }
 
@@ -119,7 +119,7 @@ public class QuicConnectionCloseFrameTest {
             return getInvalidFrameTypes().map(frameType -> dynamicTest("frame type: " + frameType,
                     () -> {
                 this.frame.setFrameType(frameType);
-                assertEquals(frameType, this.frame.getFrameType());
+                assertEquals((long)frameType, this.frame.getFrameType());
             }));
         }
 

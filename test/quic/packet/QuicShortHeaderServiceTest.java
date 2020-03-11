@@ -71,7 +71,7 @@ public class QuicShortHeaderServiceTest {
     @Test
     public void testAddCryptoFrame(){
         QuicShortHeaderPacket shortHeaderPacket = new QuicShortHeaderPacket("192.168.43.125".getBytes(),523452452343253L);
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world".getBytes());
         shortHeaderPacket.addFrame(quicCryptoFrame);
         Assertions.assertTrue(shortHeaderPacket.getFrames().contains(quicCryptoFrame),"addFrame() of short header packet should be able to add crypto frame in it's payload");
     }
@@ -79,7 +79,7 @@ public class QuicShortHeaderServiceTest {
     @Test
     public void testAddStreamFrame(){
         QuicShortHeaderPacket shortHeaderPacket = new QuicShortHeaderPacket("192.168.43.125".getBytes(),523455453243253L);
-        QuicStreamFrame streamFrame = new QuicStreamFrame(123,10,true,"Hello World");
+        QuicStreamFrame streamFrame = new QuicStreamFrame(123,10,true,"Hello World".getBytes());
         shortHeaderPacket.addFrame(streamFrame);
         Assertions.assertTrue(shortHeaderPacket.getFrames().contains(streamFrame),"addFrame() of short header packet should be able to add stream frame in it's payload");
     }
@@ -87,7 +87,7 @@ public class QuicShortHeaderServiceTest {
     @Test
     public void testEmptyFrames(){
         QuicShortHeaderPacket shortHeaderPacket = new QuicShortHeaderPacket("192.168.43.125".getBytes(),5234554533253L);
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world".getBytes());
         shortHeaderPacket.addFrame(quicCryptoFrame);
         Assertions.assertNotNull(shortHeaderPacket.getFrames(),"set of frames should not be null");
     }
@@ -95,9 +95,9 @@ public class QuicShortHeaderServiceTest {
     @Test
     public void testTypeOfFrame(){
         QuicShortHeaderPacket shortHeaderPacket = new QuicShortHeaderPacket("192.168.43.125".getBytes(),5234554533253L);
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(10,"hello world".getBytes());
         shortHeaderPacket.addFrame(quicCryptoFrame);
-        QuicStreamFrame streamFrame = new QuicStreamFrame(123,10,true,"Hello World");
+        QuicStreamFrame streamFrame = new QuicStreamFrame(123,10,true,"Hello World".getBytes());
         shortHeaderPacket.addFrame(streamFrame);
         QuicAckFrame quicAckFrame = new QuicAckFrame(1000, 100, 100, 10);
         shortHeaderPacket.addFrame(quicAckFrame);
@@ -109,7 +109,7 @@ public class QuicShortHeaderServiceTest {
     @Test
     public void testEncode(){
         QuicShortHeaderPacket shortHeaderPacket = new QuicShortHeaderPacket("192.168.43.125".getBytes(),1234567890L);
-        QuicStreamFrame quicStreamFrame = new QuicStreamFrame(0,0,true,"hello");
+        QuicStreamFrame quicStreamFrame = new QuicStreamFrame(0,0,true,"hello".getBytes());
         Assertions.assertTrue(shortHeaderPacket.encode().toString().equals("41c0a82b7d499602d2"+"08000568656c6c6f"),"encode() method should convert the object as stream of hexa bytes");
         /* DcID= c0a82b7d
             packet number = 499602d2

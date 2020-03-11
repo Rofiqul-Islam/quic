@@ -12,8 +12,8 @@ public class QuicBaseStreamFrameTest extends QuicBaseFrameCryptoStreamTest{
     protected final String endOfStream = "endOfStream";
     protected final String data = "data";
 
-    public String getDataFromObject(String fieldValue){
-        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, "");
+    public byte[] getDataFromObject(String fieldValue){
+        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, null);
         Field field = null;
         try {
             field = sf.getClass().getDeclaredField(data);
@@ -31,8 +31,8 @@ public class QuicBaseStreamFrameTest extends QuicBaseFrameCryptoStreamTest{
         return sf.getData();
     }
 
-    public int getOffsetFromObject(int fieldValue){
-        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, "");
+    public long getOffsetFromObject(int fieldValue){
+        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, null);
         Field field = null;
         try {
             field = sf.getClass().getDeclaredField(offset);
@@ -50,8 +50,8 @@ public class QuicBaseStreamFrameTest extends QuicBaseFrameCryptoStreamTest{
         return sf.getOffset();
     }
 
-    public int getStreamIdFromObject(int fieldValue){
-        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, "");
+    public long getStreamIdFromObject(int fieldValue){
+        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, null);
         Field field = null;
         try {
             field = sf.getClass().getDeclaredField(streamId);
@@ -70,7 +70,7 @@ public class QuicBaseStreamFrameTest extends QuicBaseFrameCryptoStreamTest{
     }
 
     public boolean getEndOfStreamFromObject(boolean fieldValue){
-        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, "");
+        QuicStreamFrame sf = new QuicStreamFrame(0, 0, true, null);
         Field field = null;
         try {
             field = sf.getClass().getDeclaredField(endOfStream);

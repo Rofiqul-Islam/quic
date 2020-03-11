@@ -11,8 +11,8 @@ public abstract class QuicBaseCryptoFrameTest extends QuicBaseFrameCryptoStreamT
     protected final String dataFieldName = "data";
     protected final String offsetFieldName = "offset";
 
-    public String getDataFromObject(String fieldValue){
-        QuicCryptoFrame cryptoFrame = new QuicCryptoFrame(0, "");
+    public byte[] getDataFromObject(String fieldValue){
+        QuicCryptoFrame cryptoFrame = new QuicCryptoFrame(0, null);
         Field field = null;
         try {
             field = cryptoFrame.getClass().getDeclaredField("data");
@@ -30,8 +30,8 @@ public abstract class QuicBaseCryptoFrameTest extends QuicBaseFrameCryptoStreamT
         return cryptoFrame.getData();
     }
 
-    public int getOffsetFromObject(int offset){
-        QuicCryptoFrame cryptoFrame = new QuicCryptoFrame(0, "");
+    public long getOffsetFromObject(int offset){
+        QuicCryptoFrame cryptoFrame = new QuicCryptoFrame(0, null);
         Field field = null;
         try {
             field = cryptoFrame.getClass().getDeclaredField("offset");

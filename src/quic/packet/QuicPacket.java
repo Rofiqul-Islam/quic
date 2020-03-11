@@ -90,8 +90,8 @@ public abstract class QuicPacket {
                 headerArry[7-c]=1;
             }
         }
-        System.out.println(headerByte);
-        System.out.println(headerArry[2]+" "+headerArry[3]);
+        System.out.println("headerByte = "+headerByte);
+        //System.out.println(headerArry[2]+" "+headerArry[3]);
         if(headerArry[0]==0){
             //shortheader
         }
@@ -186,27 +186,53 @@ public abstract class QuicPacket {
             version_arr[n-p]=arr[n];
         }
         long version = Util.variableLengthInteger(version_arr,0)-4278190080L;
-        System.out.println(version);
+        System.out.println("version = "+version);
         p=n;
         ////////////////////////////
         int dcIdLenD=(int)arr[p];
+        System.out.println("dcidlen = "+dcIdLenD);
         p++;
-        byte[] dcIdD= new byte[20];
+        byte[] dcIdD= new byte[dcIdLenD];
         int i=p;
         for(; i<p+dcIdLenD; i++){
             dcIdD[i-p]=arr[i];
         }
-        System.out.println(dcIdLenD);
+        System.out.print("dcId = ");
+        for(byte x :dcIdD){
+            System.out.print(Util.byteToHex(x)+" ");
+        }
+        System.out.println();
         p=i;
         ///////////////////////////
         int scIdLenD=(int)arr[p];
+        System.out.println("scidlen = "+scIdLenD);
         p++;
-        byte[] scIdD = new byte[20];
+        byte[] scIdD = new byte[scIdLenD];
         int j=p;
         for(;j<p+scIdLenD;j++){
             scIdD[j-p]=arr[j];
         }
+        System.out.print("scId = ");
+        for(byte x :scIdD){
+            System.out.print(Util.byteToHex(x)+" ");
+        }
+        System.out.println();
         p=j;
+        ////////////////////////////
+        int tokenLengthLen = Util.variableLengthIntegerLength(arr[p]);
+        byte[] tokenLength_arr=new byte[tokenLengthLen];
+        for(int c =p;c<p+tokenLengthLen;c++){
+            tokenLength_arr[c-p] = arr[c];
+        }
+        p+=tokenLengthLen;
+        long tokenLength = Util.variableLengthInteger(tokenLength_arr,1);
+        System.out.println("Token length = "+tokenLength);
+
+        byte[] token = new byte[(int)tokenLength];
+        for(int c =p;c<p+tokenLength;c++){
+            token[c-p]=arr[c];
+        }
+        p+=tokenLength;
         ////////////////////////////
         int lengthSize = Util.variableLengthIntegerLength(arr[p]);
         byte[] len_arr = new byte[lengthSize];
@@ -222,11 +248,10 @@ public abstract class QuicPacket {
         byte[] packNum_arr = new byte[packetNoLen];
         for(int c=p;c<packetNoLen+p;c++){
             packNum_arr[c-p]=arr[c];
-            System.out.println("packet  = "+packNum_arr[c-p]);
         }
         p+=packetNoLen;
         long packetNum = Util.variableLengthInteger(packNum_arr,0);
-        System.out.println(packetNum);
+        System.out.println("packetNumber = "+packetNum);
         /////////
         byte[] frameSetD = new byte[(int)(length-packetNoLen)];
         int k = p;

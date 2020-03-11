@@ -61,7 +61,7 @@ public class QuicCryptoFrameEncodeTest {
     @DisplayName("Encode crypto packet without offset, default data")
     @Test
     void shouldEncodeCryptoPacketWithoutOffsetDefaultDataTest() throws IOException {
-        QuicCryptoFrame initCryptoFrame = new QuicCryptoFrame(0, initCryptoFrameData);
+        QuicCryptoFrame initCryptoFrame = new QuicCryptoFrame(0, initCryptoFrameData.getBytes());
         byte[] quicCryptoFrameBytes = initCryptoFrame.encode();
         assertEquals(initCryptoFrameExpected, quicCryptoFrameBytes);
     }

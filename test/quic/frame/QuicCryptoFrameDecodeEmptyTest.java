@@ -28,7 +28,7 @@ public class QuicCryptoFrameDecodeEmptyTest {
     @DisplayName("Decode crypto frame without offset and empty data")
     @Test
     void shouldDecodeCryptoFrameEmptyDataNoOffsetTest() throws QuicException {
-        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(0, "");
+        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(0, null);
         QuicFrame decodedCryptoFrame = QuicFrame.decode(encodedCryptoPacketNoDataNoOffset.getBytes());
         assertEquals(expectedCryptoFrame, decodedCryptoFrame);
     }
@@ -37,7 +37,7 @@ public class QuicCryptoFrameDecodeEmptyTest {
     @DisplayName("Decode crypto frame with negative offset and empty data")
     @Test
     void shouldDecodeCryptoFrameEmptyDataNegativeOffsetTest() throws QuicException {
-        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(-2, "");
+        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(-2, null);
         QuicFrame decodedCryptoFrame = QuicFrame.decode(encodedCryptoPacketNoDataNoOffset.getBytes());
         assertEquals(expectedCryptoFrame, decodedCryptoFrame);
     }

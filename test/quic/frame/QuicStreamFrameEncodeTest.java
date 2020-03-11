@@ -2,6 +2,9 @@ package quic.frame;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -23,8 +26,13 @@ public class QuicStreamFrameEncodeTest {
     @DisplayName("Encode crypto packet without offset, default data")
     @Test
     void shouldEncodeCryptoPacketWithoutOffsetDefaultDataTest() {
-        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, data);
-        byte[] qsfBytes = qsf.encode();
+        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, data.getBytes());
+        byte[] qsfBytes = new byte[0];
+        try {
+            qsfBytes = qsf.encode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         assertEquals(qsfBytes, streamFrame.getBytes());
     }
 

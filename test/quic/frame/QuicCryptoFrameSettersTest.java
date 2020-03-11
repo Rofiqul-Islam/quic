@@ -14,8 +14,8 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataSetterSomeDataTest() {
         String expected = "06000008";
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
-        quicCryptoFrame.setData(expected);
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
+        quicCryptoFrame.setData(expected.getBytes());
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, dataFieldName));
     }
 
@@ -23,8 +23,8 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataSetterEmptyDataTest() {
         String expected = "";
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
-        quicCryptoFrame.setData(expected);
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
+        quicCryptoFrame.setData(expected.getBytes());
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, dataFieldName));
     }
 
@@ -32,8 +32,8 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataSetterNoDataTest() {
         String expected = null;
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
-        quicCryptoFrame.setData(expected);
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
+        quicCryptoFrame.setData(expected.getBytes());
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, dataFieldName));
     }
 
@@ -41,7 +41,7 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void offsetSetterSomeOffsetTest() {
         int expected = 234;
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
         quicCryptoFrame.setOffset(expected);
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, offsetFieldName));
     }
@@ -50,7 +50,7 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void offsetSetterZeroOffsetTest() {
         int expected = 0;
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
         quicCryptoFrame.setOffset(expected);
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, offsetFieldName));
     }
@@ -59,7 +59,7 @@ public class QuicCryptoFrameSettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void offsetSetterNegativeOffsetTest() {
         int value = -9;
-        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, "");
+        QuicCryptoFrame quicCryptoFrame = new QuicCryptoFrame(0, null);
         quicCryptoFrame.setOffset(value);
         int expected = 0;
         assertEquals(expected, getDataFromDataField(quicCryptoFrame, offsetFieldName));

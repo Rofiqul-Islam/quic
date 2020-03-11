@@ -15,7 +15,7 @@ public class QuicStreamFrameEqualsHashTest {
     @DisplayName("Test hash code and equals of QuicStreamFrame")
     @Test
     public void quicStreamFrameHashEqualsTest() {
-        assertEquals(new QuicStreamFrame(2, 0, true, "0400"), new QuicStreamFrame(2, 0, true, "0400"));
-        assertNotEquals(new QuicStreamFrame(2, 0, false, "0400"), new QuicStreamFrame(2, 0, true, "040000"));
+        assertEquals(new QuicStreamFrame(2, 0, true, "0400".getBytes()), new QuicStreamFrame(2, 0, true, "0400".getBytes()));
+        assertNotEquals(new QuicStreamFrame(2, 0, false, "0400".getBytes()), new QuicStreamFrame(2, 0, true, "040000".getBytes()));
     }
 }

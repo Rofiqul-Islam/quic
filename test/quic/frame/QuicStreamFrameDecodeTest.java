@@ -54,7 +54,7 @@ public class QuicStreamFrameDecodeTest {
     @DisplayName("Decode stream packet")
     @Test
     void shouldDecodeStreamPacketTest() throws QuicException {
-        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, streamFrameData);
+        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, streamFrameData.getBytes());
         QuicFrame decodedQsf = QuicFrame.decode(streamFrame.getBytes());
         assertEquals(qsf, decodedQsf);
     }

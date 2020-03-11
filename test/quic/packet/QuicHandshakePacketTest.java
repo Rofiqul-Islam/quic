@@ -203,9 +203,9 @@ public class QuicHandshakePacketTest {
                     if (i % 3 == 0) {
                         frame = new QuicAckFrame(i, i, i, i);
                     } else if (i % 3 == 1) {
-                        frame = new QuicCryptoFrame(i, "data");
+                        frame = new QuicCryptoFrame(i, "data".getBytes());
                     } else {
-                        frame = new QuicStreamFrame(i, i, false, "data");
+                        frame = new QuicStreamFrame(i, i, false, "data".getBytes());
                     }
                     frameSet.add(frame);
                     packet.addFrame(frame);
@@ -264,9 +264,9 @@ public class QuicHandshakePacketTest {
                     if (i % 3 == 0) {
                         frame = new QuicAckFrame(i, i, i, i);
                     } else if (i % 3 == 1) {
-                        frame = new QuicCryptoFrame(i, "data");
+                        frame = new QuicCryptoFrame(i, "data".getBytes());
                     } else {
-                        frame = new QuicStreamFrame(i, i, false, "data");
+                        frame = new QuicStreamFrame(i, i, false, "data".getBytes());
                     }
                     packet.addFrame(frame);
                 }

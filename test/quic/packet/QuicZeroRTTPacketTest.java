@@ -202,9 +202,9 @@ public class QuicZeroRTTPacketTest {
                     if (i % 3 == 0) {
                         frame = new QuicAckFrame(i, i, i, i);
                     } else if (i % 3 == 1) {
-                        frame = new QuicCryptoFrame(i, "data");
+                        frame = new QuicCryptoFrame(i, "data".getBytes());
                     } else {
-                        frame = new QuicStreamFrame(i, i, false, "data");
+                        frame = new QuicStreamFrame(i, i, false, "data".getBytes());
                     }
                     frameList.add(frame);
                     packet.addFrame(frame);
@@ -261,9 +261,9 @@ public class QuicZeroRTTPacketTest {
                     if (i % 3 == 0) {
                         frame = new QuicAckFrame(i, i, i, i);
                     } else if (i % 3 == 1) {
-                        frame = new QuicCryptoFrame(i, "data");
+                        frame = new QuicCryptoFrame(i, "data".getBytes());
                     } else {
-                        frame = new QuicStreamFrame(i, i, false, "data");
+                        frame = new QuicStreamFrame(i, i, false, "data".getBytes());
                     }
                     packet.addFrame(frame);
                 }

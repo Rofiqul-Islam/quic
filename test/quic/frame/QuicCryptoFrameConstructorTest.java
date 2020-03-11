@@ -22,7 +22,7 @@ public class QuicCryptoFrameConstructorTest {
     @DisplayName("Crypto Frame Constructor Some Values")
     @Test
     void shouldSetFieldsFromConstructorSomeValues() {
-        QuicCryptoFrame qcf = new QuicCryptoFrame(235, "0600008");
+        QuicCryptoFrame qcf = new QuicCryptoFrame(235, "0600008".getBytes());
         assertEquals(qcf.getData(), "0600008");
         assertEquals(qcf.getOffset(), 235);
     }
@@ -30,7 +30,7 @@ public class QuicCryptoFrameConstructorTest {
     @DisplayName("Crypto Frame Constructor Negative Value")
     @Test
     void shouldSetFieldsFromConstructorNegativeValue() {
-        QuicCryptoFrame qcf = new QuicCryptoFrame(-9, "0600008");
+        QuicCryptoFrame qcf = new QuicCryptoFrame(-9, "0600008".getBytes());
         assertEquals(qcf.getData(), "0600008");
         assertEquals(qcf.getOffset(), 0);
     }

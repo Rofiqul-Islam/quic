@@ -79,16 +79,16 @@ class QuicAckFrameTest extends QuicFrame {
 	void testAckRanges() {
 		
 		//As per specification
-		int tempLargestAck = this.quicAckFrameTest.getLargestAck();
+		long tempLargestAck = this.quicAckFrameTest.getLargestAck();
 		for (QuicAckRange ackRange : this.ackRanges) {
 			
 			
-			int smallest = tempLargestAck - ackRange.getAckRange();
+			long smallest = tempLargestAck - ackRange.getAckRange();
 			// Smallest value can not be negetive
 			assertTrue(smallest >= 0);
 			tempLargestAck = tempLargestAck - ackRange.getAckRange() - ackRange.getGap();
 			
-			int largest = smallest - ackRange.getGap() - 2;
+			long largest = smallest - ackRange.getGap() - 2;
 			// Largest value can not be negetive
 			assertTrue(largest >= 0);
 			

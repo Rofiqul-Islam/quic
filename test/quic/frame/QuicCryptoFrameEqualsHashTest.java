@@ -15,7 +15,7 @@ public class QuicCryptoFrameEqualsHashTest {
     @DisplayName("Test hash code and equals of QuicCryptoFrame")
     @Test
     public void quicCryptoFrameHashEqualsTest() {
-        assertEquals(new QuicCryptoFrame(234, "0600008"), new QuicCryptoFrame(234, "0600008"));
-        assertNotEquals(new QuicCryptoFrame(0, "0600008"), new QuicCryptoFrame(234, "06000008"));
+        assertEquals(new QuicCryptoFrame(234, "0600008".getBytes()), new QuicCryptoFrame(234, "0600008".getBytes()));
+        assertNotEquals(new QuicCryptoFrame(0, "0600008".getBytes()), new QuicCryptoFrame(234, "06000008".getBytes()));
     }
 }

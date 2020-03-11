@@ -49,7 +49,7 @@ public class QuicCryptoFrameDecodeHanshakeTest {
     @DisplayName("Decode crypto frame sent from the server with offset in 0-RTT Handshake Packet")
     @Test
     void shouldDecodeCryptoFrameWithOffsetTest() throws QuicException {
-        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(handshakeCryptoFrameOffset, handshakeCryptoFrameData);
+        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(handshakeCryptoFrameOffset, handshakeCryptoFrameData.getBytes());
         QuicFrame decodedCryptoFrame = QuicFrame.decode(handshakeCryptoFrame.getBytes());
         assertEquals(expectedCryptoFrame, decodedCryptoFrame);
     }

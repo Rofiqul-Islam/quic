@@ -34,7 +34,7 @@ public class QuicCryptoFrameDecodeOneRttTest {
     @DisplayName("Decode crypto frame sent from the server without offset in 1-RTT packet")
     @Test
     void shouldDecodeCryptoFrameWithoutOffsetTest() throws QuicException {
-        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(oneRTTCryptoFrameOffset, oneRTTCryptoFrameData);
+        QuicCryptoFrame expectedCryptoFrame = new QuicCryptoFrame(oneRTTCryptoFrameOffset, oneRTTCryptoFrameData.getBytes());
         QuicFrame decodedCryptoFrame = QuicFrame.decode(oneRTTCryptoFrame.getBytes());
         assertEquals(expectedCryptoFrame, decodedCryptoFrame);
     }

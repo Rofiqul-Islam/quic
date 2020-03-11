@@ -19,11 +19,11 @@ public class QuicStreamFrameSettersTest extends QuicBaseStreamFrameTest{
         boolean endOfStream = true;
         String data = "0400";
 
-        QuicStreamFrame qsf = new QuicStreamFrame(0, 0, false, "");
+        QuicStreamFrame qsf = new QuicStreamFrame(0, 0, false, null);
         qsf.setStreamId(streamId);
         qsf.setOffset(offset);
         qsf.setEndOfStream(endOfStream);
-        qsf.setData(data);
+        qsf.setData(data.getBytes());
 
         assertEquals(streamId, getDataFromDataField(qsf, "streamId"));
         assertEquals(data, getDataFromDataField(qsf, "data"));

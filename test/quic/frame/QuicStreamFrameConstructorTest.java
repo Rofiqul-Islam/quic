@@ -18,7 +18,7 @@ public class QuicStreamFrameConstructorTest {
         int offset = 0;
         boolean endOfStream = true;
         String data = "0400";
-        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, data);
+        QuicStreamFrame qsf = new QuicStreamFrame(streamId, offset, endOfStream, data.getBytes());
         assertEquals(qsf.getData(), data);
         assertEquals(qsf.getOffset(), offset);
         assertEquals(qsf.getStreamId(), streamId);

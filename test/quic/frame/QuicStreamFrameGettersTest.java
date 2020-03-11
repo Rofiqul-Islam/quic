@@ -16,7 +16,7 @@ public class QuicStreamFrameGettersTest extends QuicBaseStreamFrameTest {
     @Test
     public void dataGetterDataTest() {
         String data = "06000008";
-        String result = getDataFromObject(data);
+        byte[] result = getDataFromObject(data);
         assertEquals(data, result);
     }
 
@@ -33,7 +33,7 @@ public class QuicStreamFrameGettersTest extends QuicBaseStreamFrameTest {
     @Test
     public void getterStreamIdTest() {
         int sID = 0;
-        int result = getStreamIdFromObject(sID);
+        int result = (int) getStreamIdFromObject(sID);
         assertEquals(sID, result);
     }
 
@@ -42,7 +42,7 @@ public class QuicStreamFrameGettersTest extends QuicBaseStreamFrameTest {
     @Test
     public void getterOffsetTest() {
         int data = 1;
-        int result = getOffsetFromObject(data);
+        int result = (int) getOffsetFromObject(data);
         assertEquals(data, result);
     }
 

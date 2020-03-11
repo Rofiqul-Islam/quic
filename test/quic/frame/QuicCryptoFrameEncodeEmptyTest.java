@@ -37,7 +37,7 @@ public class QuicCryptoFrameEncodeEmptyTest {
     @DisplayName("Encodes crypto packet with no offset, no data")
     @Test
     void shouldEncodeCryptoPacketEmptyDataNegativeOffsetTest() throws IOException {
-        QuicCryptoFrame initCryptoFrame = new QuicCryptoFrame(-2, "");
+        QuicCryptoFrame initCryptoFrame = new QuicCryptoFrame(-2, null);
         byte[] quicCryptoFrameBytes = initCryptoFrame.encode();
         assertEquals(encodedCryptoPacketNoDataNoOffsetExpected, quicCryptoFrameBytes);
     }

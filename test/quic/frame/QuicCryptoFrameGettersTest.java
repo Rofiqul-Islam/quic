@@ -15,7 +15,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterSomeDataTest() {
         String expected = "06000008";
-        String result = getDataFromObject(expected);
+        byte[] result = getDataFromObject(expected);
         assertEquals(expected, result);
     }
 
@@ -23,7 +23,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterEmptyDataTest() {
         String expected = "";
-        String result = getDataFromObject(expected);
+        byte[] result = getDataFromObject(expected);
         assertEquals(expected, result);
     }
 
@@ -31,7 +31,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterNoDataTest() {
         String expected = null;
-        String result = getDataFromObject(expected);
+        byte[] result = getDataFromObject(expected);
         assertEquals(expected, result);
     }
 
@@ -39,7 +39,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterSomeOffsetTest() {
         int expected = 287;
-        int result = getOffsetFromObject(expected);
+        int result = (int) getOffsetFromObject(expected);
         assertEquals(expected, result);
     }
 
@@ -47,7 +47,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterZeroOffsetTest() {
         int expected = 0;
-        int result = getOffsetFromObject(expected);
+        int result = (int) getOffsetFromObject(expected);
         assertEquals(expected, result);
     }
 
@@ -55,7 +55,7 @@ public class QuicCryptoFrameGettersTest extends QuicBaseCryptoFrameTest {
     @Test
     public void dataGetterNegativeOffsetTest() {
         int expected = -9;
-        int result = getOffsetFromObject(expected);
+        int result = (int) getOffsetFromObject(expected);
         int value = 0;
         assertEquals(value, result);
     }
